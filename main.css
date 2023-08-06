@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --clr-bg: #efefef;
+  --clr-primary: #ed6161;
+  --clr-secondary: #e43b3b;
+  --clr-list: #ffffff;
+  --clr-accent: #606060;
+  --clr-active: #000000;
+  --clr-search: #d9d9d9;
+
+  --background: var(--clr-bg);
+}
+
+.darkmode {
+  --clr-bg: #101010;
+  --clr-primary: #ed6161;
+  --clr-secondary: #e43b3b;
+  --clr-list: #151515;
+  --clr-accent: #d3d3d3;
+  --clr-active: #ffffff;
+  --clr-search: #282828;
+
+  --background: var(--clr-bg);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--background);
+}
+
+nav {
+  z-index: 2;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  font-size: 1rem;
+}
+
+.nav li a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav li a:hover {
+  color: var(--clr-primary);
+}
+
+.nav button {
+  border: none;
+  background: var(--clr-primary);
+  color: var(--clr-active);
+  width: 133px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  right: 10%;
+}
+
+.nav button:hover {
+  filter: brightness(0.9);
+  scale: 1.1;
+  transition: all 0.5s ease;
+}
+
+.active {
+  color: var(--clr-active) !important;
+  cursor: default;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 70%;
+  border-bottom: 3px solid var(--clr-primary);
+}
+
+.Hero {
+  overflow-y: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  overflow: hidden;
+}
+.Hero .HeroContainer {
+  height: 70%;
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Hero .HeroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.HeroText h1 {
+  color: var(--clr-active);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.HeroText p {
+  color: var(--clr-active);
+  font-size: 2rem;
+  line-height: normal;
+}
+.underline {
+  position: relative;
+}
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -80%;
+  width: 120%;
+  height: 100%;
+  background-image: url("/underline.svg");
+  background-repeat: no-repeat;
+}
+
+.Hero .HeroImage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 99%;
+}
+
+.Hero .buttonA,
+.Hero .buttonB {
+  font-size: 24px;
+  width: 205px;
+  height: 61px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.Hero .buttonA {
+  background: var(--clr-primary);
+  color: var(--clr-active);
+}
+
+.Hero .buttonB {
+  border: 1px solid var(--clr-primary);
+  background-color: var(--clr-bg);
+  color: var(--clr-active);
+}
+
+.Hero .buttonA svg,
+.Hero .buttonB svg {
+  fill: var(--clr-active);
+}
+
+.Hero .buttonA:hover,
+.Hero .buttonB:hover {
+  filter: brightness(0.9);
+  transition: all 0.5s ease;
+}
